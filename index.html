@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Friends And Family Assignment</title>
+</head>
+
+<body class="bg-secondary">
+  <div class="container">
+    <div class="row my-4">
+      <div class="col-md-12 d-flex justify-content-center">
+        <h1>Friends and Family</h1>
+      </div>
+    </div>
+    <div class="row m-4">
+      <div class="col-md-12 d-flex justify-content-center my-3">How to Search</div>
+      <div class="col-lg-3 col-md-6 col-sm-12 p-3">
+        <div class="central ">Search by Relationship:
+          <select id='relationSel' onchange="drpJSON()">
+            <option value='0'>--</option>
+            <option value="Brother">Brother</option>"
+            <option value="Father">Father</option>"
+            <option value="Mother">Mother</option>"
+            <option value="Friend">Friend</option>"
+            <option value="Girlfriend">Girlfriend</option>"
+          </select>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 p-3">
+        <p>Search by Name: <input type="text" name="RelationName" id="RelationName" onkeyup="wrtJSON()"></p>
+        <!-- <input type="button" onclick="wrtJSON()" value="Pick"> -->
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 p-3">
+        <p>Search by Name & Relation: <input type="text" name="nameAndRelation" id="nameAndRelation"
+            onkeyup="bothJSON()"></p>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 p-3 d-flex justify-content-center">
+        <button type="button" class="btn btn-danger btn-lg btn-block" onclick="allJSON()">ALL</button>
+      </div>
+    </div>
+    <div class="row my-5">
+      <div class="col-md-6 col-sm-12 p-3">
+        <h3 class="d-flex justify-content-center"><u>NAME</u></h3>
+        <div class="d-flex justify-content-center" id="Name">None Selected</div>
+      </div>
+      <div class="col-md-6 col-sm-12 p-3">
+        <h3 class="d-flex justify-content-center"><u>Relation</u></h3>
+        <div class="d-flex justify-content-center" id="Relation">None Selected</div>
+      </div>
+    </div>
+  </div>
+  <script src="./FriendsAndFamily.js"></script>
+</body>
+
+</html>
